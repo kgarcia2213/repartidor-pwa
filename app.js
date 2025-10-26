@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000/api"; // cambia por tu dominio Render al subir
+const API_BASE = "https://api-repartidor-tm.onrender.com"; // cambia por tu dominio Render al subir
 let repartidor = null;
 let pedidoActual = null;
 
