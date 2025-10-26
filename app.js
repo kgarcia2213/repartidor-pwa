@@ -34,7 +34,7 @@ function mostrarPantalla(id) {
 
 // -------- Cargar pedidos --------
 async function cargarPedidos() {
-  const res = await fetch(`${API_BASE}/pedidos/asignados/${repartidor.id}`);
+  const res = await fetch(`${API_BASE}/api/pedidos/asignados/${repartidor.id}`);
   const pedidos = await res.json();
   const lista = document.getElementById("listaPedidos");
   lista.innerHTML = "";
@@ -59,7 +59,7 @@ async function cargarPedidos() {
 
 // -------- Ver detalle --------
 async function verDetalle(id) {
-  const res = await fetch(`${API_BASE}/pedidos/${id}`);
+  const res = await fetch(`${API_BASE}/api/pedidos/${id}`);
   const p = await res.json();
   pedidoActual = p;
 
@@ -98,7 +98,7 @@ async function confirmarEntrega() {
     comentario
   };
 
-  const res = await fetch(`${API_BASE}/entregas/confirmar`, {
+  const res = await fetch(`${API_BASE}/api/entregas/confirmar`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body)
