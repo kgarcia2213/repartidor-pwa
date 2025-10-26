@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repartos Temu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <div id="app">
+    <!-- Pantalla de Login -->
+    <section id="login-screen" class="screen active">
+      <h1>Ingreso de Repartidor</h1>
+      <input type="number" id="repartidorId" placeholder="ID de repartidor">
+      <button onclick="login()">Ingresar</button>
+    </section>
+
+    <!-- Lista de Pedidos -->
+    <section id="pedidos-screen" class="screen">
+      <h2>Pedidos Pendientes</h2>
+      <ul id="listaPedidos"></ul>
+      <button onclick="logout()">Cerrar Sesión</button>
+    </section>
+
+    <!-- Detalle del Pedido -->
+    <section id="detalle-screen" class="screen">
+      <h2>Detalle del Pedido</h2>
+      <div id="detallePedido"></div>
+      <button onclick="volverLista()">Volver</button>
+      <button onclick="mostrarConfirmar()">Confirmar Entrega</button>
+    </section>
+
+    <!-- Confirmar Entrega -->
+    <section id="confirmar-screen" class="screen">
+      <h2>Confirmar Entrega</h2>
+      <input type="text" id="comentario" placeholder="Comentario (opcional)">
+      <input type="file" id="foto" accept="image/*">
+      <button onclick="confirmarEntrega()">Enviar</button>
+      <button onclick="volverDetalle()">Volver</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
