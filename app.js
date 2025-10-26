@@ -7,7 +7,7 @@ async function login() {
   const id = document.getElementById("repartidorId").value;
   if (!id) return alert("Ingrese su ID");
 
-  const res = await fetch(`${API_BASE}/login`, {
+  const res = await fetch(`${API_BASE}/api/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ id })
