@@ -1,6 +1,6 @@
 self.addEventListener("install", e => {
   e.waitUntil(
-    caches.open("repartos-temu").then(cache => {
+    caches.open("repartos-tm").then(cache => {
       return cache.addAll(["/", "/index.html", "/app.js", "/styles.css"]);
     })
   );
